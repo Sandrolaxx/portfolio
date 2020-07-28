@@ -1,0 +1,303 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap');
+
+:root {
+    --color-purple: rgb(214, 30, 214);
+    --color-grey: rgb(233, 222, 233);
+    --color-background: rgba(0, 0, 0, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body {
+    background: #282a36;
+    font-family: 'Ubuntu', sans-serif;/*Using a googleFonts */
+    color: var(--color-grey);
+}
+
+header {
+    padding: 32px;
+    border-bottom: 1px solid #333;
+    background: var(--color-background);
+}
+
+header div {
+    text-align: center;
+}
+
+header div a {
+    color: var(--color-grey);
+    font-size: 18px;
+    line-height: 28px; /*Tip use 10px more than font-size*/
+    margin: 0 16px;
+    padding-bottom: 3px;
+    text-decoration: none;
+}
+header div a:hover {
+    color: var(--color-purple);
+    transition: color 200ms;
+}
+
+#wrapper {
+    text-align: center;
+    padding: 32px;   
+}
+
+#wrapper img {
+    border-radius: 50%;
+    border: 5px solid var(--color-purple);
+    margin-bottom: 32px;
+    height: 300px;
+}
+
+#wrapper h1 {
+    font-size: 42px;
+    line-height: 52px;
+    font-weight: bold;
+}
+
+#wrapper h2 {
+    font-size: 24px;
+    line-height: 34px;
+    font-weight: normal;
+    margin-top: 8px;
+    opacity: 0.8;
+}
+
+#wrapper p {
+    max-width: 500px;
+    margin: 32px auto;
+    font-size: 18px;
+    line-height: 28px;
+}
+
+#wrapper p a {
+    color: var(--color-purple);
+    text-decoration: none;
+}
+
+#icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 10px;
+}
+
+/*=====SOCIAL MEDIA ICONS=====*/
+#icons ul {
+    position: relative;
+    display: flex;
+    transform-style: preserve-3d;
+    /* transform: rotate(-25deg) skew(25deg); */
+}
+
+#icons ul li {
+    position: relative;
+    list-style: none;
+    width: 60px;
+    height: 60px;
+    margin: 0 10px;
+}
+
+#icons ul li:before {
+    content: '';
+    position: absolute;
+    bottom: -9px;
+    left: -10px;
+    width: 100%;
+    height: 10px;
+    background: #8d10cc;
+    transform-origin: bottom;
+    transform: skewX(-50deg);
+}
+
+#icons ul li:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -9px;
+    width: 9px;
+    height: 100%;
+    background: #40075c;
+    transform-origin: right;
+    transform: skewY(-41deg);
+}
+
+#icons ul li span { 
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    background: #333;
+    color: var(--color-purple);
+    font-size: 30px !important;
+    transition: 0.2s;
+}
+
+#icons ul li:hover span { 
+    z-index: 1000;
+    transition: 0.5s;
+    color: #fff;
+    box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.08);
+}
+
+#icons ul li:hover span:nth-child(5) {
+    transform: translate(40px, -40px);
+    opacity: 1;
+}
+
+#icons ul li:hover span:nth-child(4) {
+    transform: translate(30px, -30px);
+    opacity: 0.8;
+}
+
+#icons ul li:hover span:nth-child(3) {
+    transform: translate(20px, -20px);
+    opacity: 0.6;
+}
+
+#icons ul li:hover span:nth-child(2) {
+    transform: translate(10px, -10px);
+    opacity: 0.4;
+}
+
+#icons ul li:hover span:nth-child(1) {
+    transform: translate(0px, -0px);
+    opacity: 0.2;
+}
+
+#icons ul li:nth-child(1) span {
+    background: url(../images/fb.svg) no-repeat;
+    background-size: contain;
+    background-color: var(--color-purple);
+}
+
+#icons ul li:nth-child(2) span {
+    background: url(../images/inst.svg) no-repeat;
+    background-size: contain;
+    background-color: var(--color-purple);
+}
+
+#icons ul li:nth-child(3) span {
+    background: url(../images/lk.svg) no-repeat;
+    background-size: contain;
+    background-color: var(--color-purple);
+}
+
+#icons ul li:nth-child(4) span {
+    background: url(../images/wpp.svg) no-repeat;
+    background-size: contain;
+    background-color: var(--color-purple);
+}
+
+#icons ul li:nth-child(1):hover span {
+    background: url(../images/fb.svg) no-repeat;
+    background-size: contain;
+    background-color: var(--color-purple);
+}
+
+#icons ul li:nth-child(2):hover span {
+    background: url(../images/inst.svg) no-repeat;
+    background-size: contain;
+    background-color: var(--color-purple);
+}
+
+#icons ul li:nth-child(3):hover span {
+    background: url(../images/lk.svg) no-repeat;
+    background-size: contain;
+    background-color: var(--color-purple);
+}
+
+#icons ul li:nth-child(4):hover span {
+    background: url(../images/wpp.svg) no-repeat;
+    background-size: contain;
+    background-color: var(--color-purple);
+}
+
+/*=====CARDS===== */
+.cards {
+    max-width: 800px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    padding: 40px;
+}
+
+.card {
+    background-color: var(--color-purple);
+    filter: brightness(92%);
+}
+
+.card_image-container img {
+    width: 100%;
+    height: 142px;
+}
+
+.card_content {
+    padding: 12px;
+    font-size: 16px;
+}
+
+.card_tecUsed {
+    background-color: var(--color-purple);
+    height: 20%;
+    filter: brightness(80%);
+    border-radius: 20px;
+    padding: 2px 3px;
+    margin-top: 6px;
+    font-size: 12px;
+}
+
+.card_info {
+    margin-top: -10px;
+    padding: 14px;
+    font-size: 16px;
+}
+
+/*=====MODAL=====*/
+.modal-overlay {
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.modal {
+    background-color: var(--color-purple);
+    width: 50%;
+    height: 50%;
+    margin: 5vh auto;
+    position: relative;
+}
+
+.modal .close-modal {
+    color: black;
+    position: absolute;
+    right: 2px;
+    top: 2px;
+    cursor: pointer;
+}
+
+/*=====MODAL.ACTIVE=====*/
+.modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+iframe {
+    width: 100%;
+    height: 90%;
+    position: absolute;
+    top: 5%;
+}
